@@ -1,5 +1,4 @@
 #include<stdio.h>
-
 void swap(int* a, int* b)
 {
     int t = *a;
@@ -7,7 +6,6 @@ void swap(int* a, int* b)
     *b = t;
 }
 int partition(int arr[], int low, int high){
-
     int i,j;
     int pivot = arr[low];
     i = low;
@@ -16,7 +14,6 @@ int partition(int arr[], int low, int high){
         do{
             i++;
         }while(arr[i]<=pivot);
-
         do{
             j--;
         }while(arr[j]>pivot);
@@ -31,7 +28,7 @@ int partition(int arr[], int low, int high){
 int quick_sort(int arr[], int low, int high){
 
     if(low < high){
-        //devide and conqure
+        //divide and conquer
         int p = partition(arr,low,high);
         //recursively call left and right side array
         quick_sort(arr, low, p);
@@ -42,12 +39,12 @@ int quick_sort(int arr[], int low, int high){
 int main(){
 
     //out actual array is = [40,3,100,5,10,20,50,60]
-    //we take an infinity number (100000) at the last for our calculation
+    //We take an infinite number (100000) at the last for our calculation
 
     int arr[] = {40,3,100,5,10,20,50,60,100000};
     int size = sizeof(arr)/sizeof(arr[0]);
 
-    //call quick sort function
+    //call quicksort function
     quick_sort(arr,0,size-1);
     int i;
     for (i=0; i < size-1; i++)
