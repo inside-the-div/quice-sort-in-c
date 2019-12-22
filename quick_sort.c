@@ -42,7 +42,7 @@ int quick_sort(int arr[], int low, int high){
 int main(){
 
     //out actual array is = [40,3,100,5,10,20,50,60]
-    //we take a infinity number (100000) at the last for our calculation
+    //we take an infinity number (100000) at the last for our calculation
 
     int arr[] = {40,3,100,5,10,20,50,60,100000};
     int size = sizeof(arr)/sizeof(arr[0]);
